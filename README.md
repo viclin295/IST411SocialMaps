@@ -16,6 +16,7 @@ The technologies that this project will utilize will be SpringMVC/SpringBoot, Sl
 In addition to the newly proposed project, I will also be incorporating the use of Twitter's API and Google Maps API...Possibily Facebook and other social media APIs. 
 
   a. What are the project’s use cases?
+  
   Use Case 1:
   Set up basic login and authentication UI as well as basic home page UI
   
@@ -42,6 +43,7 @@ In addition to the newly proposed project, I will also be incorporating the use 
   
   b. Any other design docs that are necessary for me to understand your project?
   This project will be using the SpringMVC and I will most likely be using the agile method. Many of technologies listed does require extensive research. Some of the design docs come from well made chatrooms already. Examples include: 
+  
   https://api.slack.com/
   
   https://firebase.google.com/docs/reference/
@@ -55,6 +57,7 @@ In addition to the newly proposed project, I will also be incorporating the use 
   
 3. Project Schedule - what will you have done at each checkpoint? What will the
 final project look like?
+
 Each checkpoint involves one or two use cases and I will try to move ahead of schedule if possible. 
 Checkpoint 1:
 Complete the first use case if possible second use case. The project will have a some kind of UI that displays the login and the home page after the authentication. Then continue moving on to adding messaging functionality.
