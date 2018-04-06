@@ -1,13 +1,10 @@
 # IST411SocialMaps
-spring application that creates a map that displays social media information
 
-# IST 411 Project Proposal
 1. Project Description - What is the high level idea of your project? This should
 be similar to your daily log submission (but could have changed).
+A Spring application that creates a map that displays social media information that involves the use of Twitter and Google Maps APIs.
 
-****Please read: So the strikeout does not seem to be showing up on the git pages. Starting with the /*~~ and ending with */ is like a comment block.  
-
-!!NEW PROJECT: Using Twitter API and Facebook API alongside Google Maps API to create some kind of data visualization. For example, in the phone application Snapchat, you can zoom out on the screen to show "hotspots" on a map. The "hotspots" are determined by the amount of activity a certain location has. In my case, I want to use Twitter's hastags and tweets, to display them onto Google maps. The user can search for a specific hashtag or keyword and it will display it onto Google maps. 
+Using Twitter API and Facebook API alongside Google Maps API to create some kind of data visualization. For example, in the phone application Snapchat, you can zoom out on the screen to show "hotspots" on a map. The "hotspots" are determined by the amount of activity a certain location has. In my case, I want to use Twitter's hastags and tweets, to display them onto Google maps. The user can search for a specific hashtag or keyword and it will display it onto Google maps. 
 
 2. Project Design - lower-level description.
 What technologies will you use, how will they integrate?
