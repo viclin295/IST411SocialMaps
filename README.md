@@ -8,5 +8,6 @@ Hitting localhost:8080/  will show the google login logo
 
 After login, it will redirect the user to the google maps
 
-*Problem* Can't get Twitter data unless I have the keys working. Will try Facebook API soon.
-*Bug* Using incognito is best since Chrome does not save credentials. Doing login a second time will automatically take you to maps.
+*Problem:* Can't get Twitter data unless I have the keys working. Will try Facebook API soon.
+
+*Bug:* Using incognito is best since Chrome does not save credentials. Doing login a second time will automatically take you to maps.
