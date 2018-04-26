@@ -1,13 +1,17 @@
 # IST411SocialMaps
 
-# CheckPoint 2
-At this point, I still have not resolved my issue with Twitter not accepting my keys. I switched to using Google's sign in API instead of using Twitter's OAuth login. I was able to display Google Maps onto the page. In terms of if I reached my goal for Checkpoint 2; I did not. I am still behind schedule for my project and at this point I have gotten maybe 1/3 to the checkpoint 2. Checkpoint 2 was to show that Google maps was able to plot points/pins and show tweets based on user searches OR moving the pin around on Google Maps. I need to continue to work on Twitter, otherwise  I will switch to a different social media site that works. 
+# CheckPoint 3
+I resolved my Twitter key issues from checkpoint 2. I also updated my Google Maps
+to have a search function as well as having an autocomplete function. When the user
+types in a location, it will place a marker on the maps. In checkpoint 3, I wanted to
+have the user enter a place and then display Tweets on the bottom of the page. 
 
-Notes on project:
-Hitting localhost:8080/  will show the google login logo
-
-After login, it will redirect the user to the google maps
-
-*Problem:* Can't get Twitter data unless I have the keys working. Will try Facebook API soon.
-
-*Bug:* Using incognito is best since Chrome does not save credentials. Doing login a second time will automatically take you to maps.
+#What needs to be done...
+I still have trouble using Twitter's API since the documentation for it is in curl.
+The good news is that I know that I can still use most of the methods that comes from
+Spring Social. There is documentation on Spring's web page. What I hope to accomplish '
+at this point is to allow users to enter a place, and on the bottom of the web page
+displays the tweets. The bad news is that I was not able to complete the things I 
+want. I was hoping to implement multiple social media APIs and gives the user to 
+switch between different social medias on Google Maps. Kind of the reason why I changed
+the name from Social Maps to Twitter Maps. 
