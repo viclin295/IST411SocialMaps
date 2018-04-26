@@ -14,4 +14,4 @@ at this point is to allow users to enter a place, and on the bottom of the web p
 displays the tweets. The bad news is that I was not able to complete the things I 
 want. I was hoping to implement multiple social media APIs and gives the user to 
 switch between different social medias on Google Maps. Kind of the reason why I changed
-the name from Social Maps to Twitter Maps. 
+the name from Social Maps to Twitter Maps.  
