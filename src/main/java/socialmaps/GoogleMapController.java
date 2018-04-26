@@ -10,10 +10,15 @@ public class GoogleMapController {
 
     @RequestMapping("/maps")
     public String showMaps(){
-        return "googlemaps";
+        return "maps/googlemaps";
     }
 
-    @RequestMapping("/")
+    @RequestMapping("/maps2")
+    public String showMaps2(){
+        return "maps/googlemaps2";
+    }
+
+    @RequestMapping("/googlelogin")
     public String login(){
         return "login";
     }
