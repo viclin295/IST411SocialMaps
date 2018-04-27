@@ -112,16 +112,14 @@
 
 
         var geocoder = new google.maps.Geocoder();
-        var address = document.getElementById('pac-input');
-        address.addEventListener("keyup", function(event) {
-            if (geocoder) {
-                geocoder.geocode({
-                    'address': address.value
-                }, function (results, status) {
-                    if (status == google.maps.GeocoderStatus.OK) showResult(results[0]);
-                });
-            }
-        });
+        var address = document.getElementById('pac-input').value;
+        if (geocoder) {
+            geocoder.geocode({
+                'address': address.value
+            }, function (results, status) {
+                if (status == google.maps.GeocoderStatus.OK) showResult(results[0]);
+            });
+        }
 
         function showResult(result){
             console.log(result.geometry.location.lat());

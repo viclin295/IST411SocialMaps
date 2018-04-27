@@ -18,6 +18,11 @@ public class GoogleMapController {
         return "maps/googlemaps2";
     }
 
+    @RequestMapping("/maps3")
+    public String showMaps3(){
+        return "maps/googlemaps3";
+    }
+
     @RequestMapping("/googlelogin")
     public String login(){
         return "login";
