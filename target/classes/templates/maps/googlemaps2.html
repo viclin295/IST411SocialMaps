@@ -90,9 +90,45 @@
 <input type="text" class="form-control" name="latitude"/>
 <label for="inputIsiBerita"> Longitude</label>
 <input type="text" class="form-control" name="longitude"/>
-<input id="pac-input" class="controls" type="text" placeholder="Search Box"/>
+<input id="pac-input" class="controls" onsubmit="initAutocomplete()" type="text" placeholder="Search Box"/>
 <div id="map"></div>
-<script src="/maps/googleMap.js"></script>
+<script>
+    function initAutocomplete(){
+        var myLatlng = new google.maps.LatLng(41.38, 2.18);
+        var myOptions = {
+            zoom: 13,
+            center: myLatlng
+        }
+
+        var map = new google.maps.Map(document.getElementById("map"), myOptions);
+        google.maps.event.addListener(map, 'click', function(event) {
+            var marker = new google.maps.Marker({
+                position: myLatlng,
+                map: map,
+                draggable:true,
+                title:"Drag me!"
+            });
+        });
+
+
+        var geocoder = new google.maps.Geocoder();
+        var address = document.getElementById('pac-input');
+        address.addEventListener("keyup", function(event) {
+            if (geocoder) {
+                geocoder.geocode({
+                    'address': address.value
+                }, function (results, status) {
+                    if (status == google.maps.GeocoderStatus.OK) showResult(results[0]);
+                });
+            }
+        });
+
+        function showResult(result){
+            console.log(result.geometry.location.lat());
+            console.log(result.geometry.location.lng());
+        }
+    }
+</script>
 <script async = 'async' src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA4HU465PSy4N8NCaJ2cNvMnZ5M4Ss35J4&amp;libraries=places&amp;callback=initAutocomplete"></script>
 </body>
 </html>
