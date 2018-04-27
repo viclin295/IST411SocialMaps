@@ -38,5 +38,4 @@ public class TwitterController {
         return "friend";
     }
 
-
 }
