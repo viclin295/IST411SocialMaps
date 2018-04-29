@@ -90,11 +90,11 @@
 <input type="text" class="form-control" name="latitude"/>
 <label for="inputIsiBerita"> Longitude</label>
 <input type="text" class="form-control" name="longitude"/>
-<input id="pac-input" class="controls" onsubmit="initAutocomplete()" type="text" placeholder="Search Box"/>
+<input id="pac-input" class="controls" onsubmit="initAutocomplete()" type="text" placeholder="Enter a location"/>
 <div id="map"></div>
 <script>
     function initAutocomplete(){
-        var myLatlng = new google.maps.LatLng(41.38, 2.18);
+        var myLatlng = new google.maps.LatLng(40.72, -70.00);
         var myOptions = {
             zoom: 13,
             center: myLatlng
