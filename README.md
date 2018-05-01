@@ -1,17 +1,23 @@
 # IST411SocialMaps
 
-# CheckPoint 3
-I resolved my Twitter key issues from checkpoint 2. I also updated my Google Maps
-to have a search function as well as having an autocomplete function. When the user
-types in a location, it will place a marker on the maps. In checkpoint 3, I wanted to
-have the user enter a place and then display Tweets on the bottom of the page. 
+# Final Deliverable
+I encountered many issues throughout my project. First being the Twitter keys not being accepted. Google Maps not displaying properly. Then one of the biggest challenges was trying to have tweets display along side Google Maps. Given the time that I had left, I eneded up changing a large aspect of my program to finish it. However, there is still room for improvement and change. Even though I did manage to get tweets based on geographic corrdinates, the overall look and feel to the UI could be A LOT better. 
+
+Use Case 1: 
+Set up basic login and authentication UI as well as basic home page UI *Completed
+
+Use Case 2:
+Communicate with Twiiter's API and get back information such as images, text, location(long, lat), etc... Format data using JSON or some form of of a mark up language. *Completed
+
+Use Case 3:
+Plot data and information onto Google Maps using the geolocation from Twitter's endpoints. Create visuals for the users on the Google Maps. Show hotspots from the data. *Partially Completed
+
+Use Case 4:
+Implement other social media APIs so that the end users are able to have access to more information. As well as implementing the APIs onto the maps. *Never completed
 
 #What needs to be done...
-I still have trouble using Twitter's API since the documentation for it is in curl.
-The good news is that I know that I can still use most of the methods that comes from
-Spring Social. There is documentation on Spring's web page. What I hope to accomplish '
-at this point is to allow users to enter a place, and on the bottom of the web page
-displays the tweets. The bad news is that I was not able to complete the things I 
-want. I was hoping to implement multiple social media APIs and gives the user to 
-switch between different social medias on Google Maps. Kind of the reason why I changed
-the name from Social Maps to Twitter Maps.  
+TO-DO
+Update and improve the UI so that the tweets could be displayed properly on Google Maps.
+Update and improve code logic to communicate tweets and Google Maps API
+Make it deployable
+I want to continue working on this since it is a great learning experience.
