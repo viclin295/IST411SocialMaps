@@ -2,29 +2,49 @@ package socialmaps;
 
 
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.*;
+import twitter4j.*;
+//import twitter4j.GeoLocation;
+//import twitter4j.Query;
+//import twitter4j.QueryResult;
 
 @Controller
 public class GoogleMapController {
 
-    @RequestMapping("/maps")
-    public String showMaps(){
-        return "maps/googlemaps";
+
+    @GetMapping("/maps")
+    public String showMaps4(Model model){
+//        model.addAttribute("latitude",new Coordinates());
+//        model.addAttribute("longitude",new Coordinates());
+        model.addAttribute("coordinates",new Coordinates());
+        return "maps/googlemaps4";
+    }
+    @PostMapping("/gettweets")
+    @ResponseBody
+    public String testcoord(@ModelAttribute Coordinates c) throws TwitterException {
+        Twitter twitter = new TwitterFactory().getInstance();
+        double res = 5;
+        String resUnit = "mi";
+        Query query = new Query().geoCode(new GeoLocation(c.getLatitude(),c.getLongitude()),res,resUnit);
+        query.count(10);
+        QueryResult result = twitter.search(query);
+        StringBuilder sb = new StringBuilder();
+        sb.append("<html><body>");
+        sb.append("<a href=\"http://localhost:8080/maps\" >[GO BACK]</a>");
+        for (Status status : result.getTweets()) {
+            sb.append("<p>@" + status.getUser().getScreenName() + ":" + status.getText() + "</p>");
+        }
+        return sb.toString();
     }
 
-    @RequestMapping("/maps2")
-    public String showMaps2(){
-        return "maps/googlemaps2";
-    }
-
-    @RequestMapping("/maps3")
-    public String showMaps3(){
-        return "maps/googlemaps3";
-    }
-
-    @RequestMapping("/googlelogin")
+    @RequestMapping("/")
     public String login(){
         return "login";
+    }
+
+    @RequestMapping("/tinymap")
+    public String tinyMap(){
+        return "maps/tinymap";
     }
 }

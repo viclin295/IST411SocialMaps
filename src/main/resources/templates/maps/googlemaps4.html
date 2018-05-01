@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang='en' xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Google Maps 4</title>
+    <div>
+        <h3> Enter an adress and press the button</h3>
+
+        <input id="address" type="text" placeholder="Enter address here" />
+        <button id="btn">Get LatLong</button>
+
+        <form action="#" th:action="@{/gettweets}" th:object="${coordinates}" method="post">
+            <p>Username: <input id="latitude" required='required' type='number' step=".01" th:field="*{latitude}"/></p>
+            <p>Password: <input id="longitude" required='required' type='number' step=".01" th:field="*{longitude}"/></p>
+            <p><input type="submit" value="Submit" /> <input type="reset" value="Reset" /></p>
+        </form>
+    </div>
+</head>
+<body>
+
+<script>
+    function showResult(result) {
+        document.getElementById('latitude').value = Number(result.geometry.location.lat()).toFixed(2);
+        document.getElementById('longitude').value = Number(result.geometry.location.lng()).toFixed(2);
+    }
+
+    function getLatitudeLongitude(callback, address) {
+        // If adress is not supplied, use default value 'Ferrol, Galicia, Spain'
+        address = address || 'Ferrol, Galicia, Spain';
+        // Initialize the Geocoder
+        geocoder = new google.maps.Geocoder();
+        if (geocoder) {
+            geocoder.geocode({
+                'address': address
+            }, function (results, status) {
+                if (status == google.maps.GeocoderStatus.OK) {
+                    callback(results[0]);
+                }
+            });
+        }
+    }
+
+    var button = document.getElementById('btn');
+
+    button.addEventListener("click", function () {
+        var address = document.getElementById('address').value;
+        getLatitudeLongitude(showResult, address)
+    });
+
+</script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA4HU465PSy4N8NCaJ2cNvMnZ5M4Ss35J4
+            &amp;libraries=geometry">
+</script>
+
+<iframe id="map" src="http://localhost:8080/tinymap" width="100%" height="400px"></iframe>
+
+</body>
+</html>
